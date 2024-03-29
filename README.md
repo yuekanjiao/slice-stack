@@ -1,4 +1,4 @@
-**Slice Stack - an ImageJ plugin to slice a stack**
+# Slice Stack - an ImageJ plugin to slice a stack
 
 ![](Slice-Stack.png)
 
