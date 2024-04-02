@@ -1,6 +1,6 @@
 # Slice Stack - an ImageJ plugin to slice a stack
 
-![](Slice-Stack.png)
+![](figures/Slice-Stack.png)
 
 Plugin Slice Stack uses 2 parallel lines red and blue on 2 different slices of a stack or the same slice to get a sliced image, the top and bottom of the sliced image correspond to the red and blue lines on the stack. The plugin runs on 3D stacks of 8, 16, 32 bits and RGB color.
 
