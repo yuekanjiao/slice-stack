@@ -114,9 +114,9 @@ public class Slice_Stack implements PlugIn,
         ImagePlus.removeImageListener(this);
         ImagePlus.addImageListener(this);
 
-        int tool = Toolbar.getInstance().getToolId("Slice Tool");
+        int tool = Toolbar.getInstance().getToolId("EyeJ Tool");
         if (tool < 0) {
-            new MacroInstaller().install("macro 'Slice Tool-Cf00L03f2C00fL0cfb'{}");
+            new MacroInstaller().install("macro 'EyeJ Tool-C00cO00eeC000V3399CfffV3444'{}");
         } else {
             Toolbar.getInstance().setTool(tool);
         }
@@ -453,36 +453,33 @@ public class Slice_Stack implements PlugIn,
         helpDialog.setLayout(new BorderLayout());
         TextArea text = new TextArea(35, 70);
         text.setEditable(false);
-        text.setText("Plugin Slice Stack uses 2 parallel lines red and blue on 2 different slices \n"
-                + "of a stack or the same slice to get a sliced image, the top and bottom \n"
-                + "of the sliced image correspond to the red and blue lines on the stack. \n"
-                + "The plugin runs on 3D stacks of 8, 16, 32 bits and RGB color.\n"
-                + "\n"
-                + "The red and blue lines can: \n"
-                + "- Move up and down the stack in Z by the 2 sliders red and blue \n"
-                + "in the Slice Stack window. The line shows as a solid line when it is \n"
-                + "on the current slice, otherwise the line shows as a dash line. \n"
-                + "By default the red line is on the top slice of the stack \n"
-                + "and the blue line is on the bottom slice.\n"
-                + "- Rotate in the XY plane using the mouse to drag the 4 ends of the 2 lines.\n"
-                + "- Translate in the XY plane using the mouse to drag between the 2 ends \n"
-                + "of the line.\n"
-                + "\n"
-                + "Therefore the 2 lines have in total of 6 transformations in the XY plane. \n"
-                + "In case the mouse is pressed but not on any of the 2 lines, \n"
-                + "the previous transformation will continue. For example, if the red line \n"
-                + "was translated previously, the red line will continue translate \n"
-                + "to where the mouse is pressed. To switch among the 6 transformations, \n"
-                + "simply click on the line at the end or between its 2 ends. \n"
-                + "Select the Slice Tool installed in the ImageJ Toolbar by the plugin \n"
-                + "to do the 6 transformations of the 2 lines.  \n"
-                + "\n"
-                + "The plugin assumes the stack has equal pixel width and pixel height, \n"
-                + "and larger voxel depth as in usual microscopy images. A pixel \n"
-                + "in the sliced image is bilinear interpolated from the slice of the stack \n"
-                + "if both the red and blue lines are on the slice. If a pixel \n"
-                + "in the sliced image is between 2 slices, it is linear interpolated \n"
-                + "between the 2 bilinear interpolated points in the 2 slices.");
+        text.setText("Plugin Slice Stack was wrtten by Yuekan Jiao (yuekan.jiao@gmail.com). It\n"
+                + "uses 2 parallel lines red and blue on 2 different slices of a stack or\n"
+                + "the same slice to get a sliced image, and the top and bottom of the sliced\n"
+                + "image correspond to the red and blue lines on the stack. It runs on 3D stacks\n"
+                + "of 8, 16, 32 bits and RGB color.\n\n"
+                + "The red and blue lines can:\n\n"
+                + "1. Move up and down the stack in Z:\n"
+                + "By the 2 sliders red and blue in the Slice Stack window. The line shows as\n"
+                + "a solid line when it is on the current slice, otherwise the line shows as\n"
+                + "a dash line. By default the red line is on the top slice of the stack and\n"
+                + "the blue line is on the bottom slice.\n\n"
+                + "2. Rotate in the XY plane:\n"
+                + "Using the mouse to drag the 4 ends of the 2 lines.\n\n"
+                + "3. Translate in the XY plane:\n"
+                + "Using the mouse to drag between the 2 ends of the line.\n\n"
+                + "Therefore the 2 lines have in total of 6 transformations in the XY plane.\n"
+                + "In case the mouse is pressed but not on any of the 2 lines, the previous\n"
+                + "transformation will continue. For example, If the red line was translated\n"
+                + "previously, the red line will continue translate to where the mouse is pressed.\n"
+                + "To swtich among the 6 transformations, simply click on the line at the end or\n"
+                + "between its 2 ends.\n\n"
+                + "The plugin assumes the stack has equal pixel width and pixel height,\n"
+                + "and bigger voxel depth as in the most microscopy images. A pixel in the\n"
+                + "sliced image is bilinear interpolated from the slice of the stack if both\n"
+                + "the red and blue lines are on the slice. If a pixel in the sliced image is\n"
+                + "between 2 slices, it is linear interpolated between 2 bilinear\n"
+                + "interpolated points in the 2 slices.");
         helpDialog.add(text, "Center");
         Button okButton = new Button("OK");
         okButton.addActionListener(new ActionListener() {
@@ -1199,7 +1196,7 @@ public class Slice_Stack implements PlugIn,
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        if (!(Toolbar.getToolName().equals("Slice Tool"))) {
+        if (!(Toolbar.getToolName().equals("EyeJ Tool"))) {
             return;
         }
         int x = e.getX();
@@ -1237,7 +1234,7 @@ public class Slice_Stack implements PlugIn,
 
     @Override
     public void mousePressed(MouseEvent e) {
-        if (!(Toolbar.getToolName().equals("Slice Tool"))) {
+        if (!(Toolbar.getToolName().equals("EyeJ Tool"))) {
             return;
         }
         int x = e.getX();
@@ -1267,7 +1264,7 @@ public class Slice_Stack implements PlugIn,
     @Override
     public void mouseReleased(MouseEvent e) {
 
-        if (!(Toolbar.getToolName().equals("Slice Tool"))) {
+        if (!(Toolbar.getToolName().equals("EyeJ Tool"))) {
             return;
         }
         int x = e.getX();

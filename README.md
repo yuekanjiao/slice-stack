@@ -12,6 +12,6 @@ The red and blue lines can:
 
 **Translate in the XY plane** using the mouse to drag between the 2 ends of the line.
 
-Therefore the 2 lines have in total of 6 transformations in the XY plane. In case the mouse is pressed but not on any of the 2 lines, the previous transformation will continue. For example, if the red line was translated previously, the red line will continue translate to where the mouse is pressed. To switch among the 6 transformations, simply click on the line at the end or between its 2 ends. Select the Slice Tool installed in the ImageJ Toolbar by the plugin to do the 6 transformations of the 2 lines.  
+Therefore the 2 lines have in total of 6 transformations in the XY plane. In case the mouse is pressed but not on any of the 2 lines, the previous transformation will continue. For example, if the red line was translated previously, the red line will continue translate to where the mouse is pressed. To switch among the 6 transformations, simply click on the line at the end or between its 2 ends. Select the EyeJ Tool installed in the ImageJ Toolbar by the plugin to do the 6 transformations of the 2 lines.  
 
 The plugin assumes the stack has equal pixel width and pixel height, and larger voxel depth as in usual microscopy images. A pixel in the sliced image is bilinear interpolated from the slice of the stack if both the red and blue lines are on the slice. If a pixel in the sliced image is between 2 slices, it is linear interpolated between the 2 bilinear interpolated points in the 2 slices.

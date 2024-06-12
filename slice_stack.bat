@@ -1,1 +1,0 @@
-jar cf slice_stack.jar *.java *.class plugins.config
